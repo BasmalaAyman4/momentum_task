@@ -1,0 +1,35 @@
+.imageWrapper {
+    position: relative;
+    width: 100%;
+
+    /* Adjust as needed */
+    overflow: hidden;
+}
+
+.product__img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.hoverImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.imageWrapper:hover .defaultImg {
+    opacity: 0;
+}
+
+.imageWrapper:hover .hoverImg {
+    opacity: 1;
+}
+.card__btn{
+    background-color: #e5d7cc !important;
+    border: 1px solid #e5d7cc !important;
+    color: #000 !important;
+}
