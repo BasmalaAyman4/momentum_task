@@ -104,6 +104,7 @@ const Products = () => {
         </div>
         <div className={styles.sortingButtons}>
           <h3>Sort by Price:</h3>
+          <div>
           <label
             className={`${styles.container} ${sortOption === "priceHighToLow" ? styles.active : ""}`}
             onClick={() => sortProducts("priceHighToLow")}
@@ -130,6 +131,7 @@ const Products = () => {
             </svg>
             <span>Price: Low to High</span>
           </label>
+          </div>
         </div>
 
         <Container>

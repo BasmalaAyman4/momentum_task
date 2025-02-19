@@ -17,16 +17,24 @@
 
 .filters__category {
     position: sticky;
-    top: 60px;
+    top: 60px; 
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     display: flex;
     align-items: center;
     column-gap: 30px;
     justify-content: center;
-    padding: 15px 0;
-    z-index: 999;
+    padding: 15px 20px;
+    z-index: 1000;
+    overflow-x: auto;
+    white-space: nowrap; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
+.filters__category::-webkit-scrollbar {
+    display: none;
+}
+
 
 .category__para {
     font-size: 17px;
@@ -112,4 +120,48 @@
     background: #e5d7cc;
     color: white;
     border-radius: 5px;
+}
+.sortingButtons div{
+    display: flex;
+}
+@media (min-width:0px) and (max-width:600px) {
+    .banner{
+        margin-top: 60px;
+    }
+    .banner img{
+        width: 100%;
+    }
+    .banner__body{
+        display: none;
+    }
+    .filters__category{
+        justify-content: flex-start;
+    }
+    .sortingButtons div{
+        display: flex;
+        flex-direction: column;
+    }
+    .products__body{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .sortingButtons h3{
+font-size: 17px;
+    }
+       .container span{
+font-size: 15px;
+    }
+}
+@media (min-width:600px) and (max-width:900px) {
+    .filters__category{
+        justify-content: flex-start;
+    }
+    .products__body{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (min-width:900px) and (max-width:1200px) {
+   
+    .products__body{
+        grid-template-columns: repeat(3,1fr);
+    }
 }

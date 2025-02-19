@@ -45,12 +45,19 @@
     transition: transform 0.25s ease-out;
 }
 
-/* Hover Effect */
 .nav__link:hover::after {
     transform: scaleX(1);
 }
 
-/* Active Link Effect */
 .nav__link.active::after {
     transform: scaleX(1);
+}
+@media (min-width:0px) and (max-width:600px) {
+    .header{
+        padding: 10px;
+    }
+    .nav__logo,
+    .nav__link{
+        font-size: 15px;
+    }
 }

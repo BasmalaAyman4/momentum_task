@@ -13,25 +13,25 @@ const cartSlice = createSlice({
             const existingItem = state.cartItems?.find(
                 item => item.barCode == newItem.barCode
             );
-            state.totalQuantity++
-             if (!existingItem) { 
+        
+            if (!existingItem) { 
                 state.cartItems?.push({
                     quantity: newItem.quantity,
                     price: Number(newItem.price),
-                    img:newItem.img,
-                    totalPrice:(Number(newItem.price))*newItem.quantity,
-                    itemName:newItem.itemName,
-              barCode:newItem.barCode
-                })
-                
-             }
-             else {
-                existingItem.quantity++
-                existingItem.totalPrice = Number(existingItem.totalPrice) + Number(newItem.price)
+                    img: newItem.img,
+                    totalPrice: Number(newItem.price) * newItem.quantity,
+                    itemName: newItem.itemName,
+                    barCode: newItem.barCode
+                });
+            } else {
+                existingItem.quantity += newItem.quantity;
+                existingItem.totalPrice = Number(existingItem.totalPrice) + (Number(newItem.price) * newItem.quantity);
             } 
+        
+            state.totalQuantity += newItem.quantity;
+        
             state.totalAmount = state.cartItems?.reduce((total, item) =>
-                total + Number(item.price) * Number(item.quantity), 0)
-         
+                total + Number(item.price) * Number(item.quantity), 0);
         },
         deleteItem: (state, action) => {
             const barCode= action.payload

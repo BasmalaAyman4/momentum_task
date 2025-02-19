@@ -25,3 +25,42 @@ text-align: center;
 .Offcanvas{
     z-index: 100000 !important;
 }
+.cart__empty{
+    text-align: center;
+}
+.cart__details,
+.details__body{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.cart__details{
+    justify-content: space-between;
+margin-bottom: 25px;
+}
+.cart__img{
+    width: 70px;
+}
+.cart__details h4{
+    font-size: 17px;
+}
+.deleteico{
+    width: 30px;
+}
+.cart__qty{
+    display: flex;
+    align-items: center;
+    border: 1px solid #eee;
+  width: 100px;
+    padding: 5px 15px;
+    justify-content: space-between;
+}
+.cart__qty button{
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    
+}
+.details__body p{
+    margin-bottom: 0;
+}

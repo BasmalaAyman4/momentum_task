@@ -1,0 +1,29 @@
+.footer{
+    background-color: #e5d7cc;
+    padding: 20px;
+
+}
+.logo{
+    width: 500px;
+}
+.footer__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__para{
+    font-size: 20px;
+    font-weight: bold;
+}
+@media (min-width:0px) and (max-width:600px) {
+    .footer{
+        padding: 10px 5px;
+    }
+   .logo{
+    width: 100%;
+   } 
+   .footer__body{
+    flex-direction: column;
+    row-gap: 20px;
+   }
+}
